@@ -18,26 +18,20 @@
 
 
 </head>
-<body>
+<body onload="render()">
 		<section class="cardWrapper">
 			<div class="cardMenuContainer">
 				<div class="logoContainer"><img src="img/logo.png" alt="logo"></div>
 				<div class="card" style="width: 12rem;">
 					<ul class="list-group list-group-flush">
 							<li class="list-group-item" onclick="renderHtmlAsk()">HTML</li>
-							<li class="list-group-item"onclick="renderCssAsk()">CSS</li>
+							<li class="list-group-item" onclick="renderCssAsk()">CSS</li>
 							<li class="list-group-item" onclick="renderJsAsk()">JS</li>
 							<li class="list-group-item" onclick="renderJavaAsk()">Java</li>
 					</ul>
 				</div>
 			</div>
-			<div class="cardContentWrapper" id="content">
-				<h2>Welcome to the 
-					Quiz</h2>
-				<p>Please select your Code-Langlauge.</p>
-				<button type="button" class="btn btn-lg">Large button</button>
-			</div>
-
+			<div class="cardContentWrapper" id="content"></div>
 	 </section>
 </body>
 </html>
