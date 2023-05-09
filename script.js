@@ -40,7 +40,7 @@ function askHtml(Quiz) {
 			<h2>Welcome to<br>
 					The Awesome ${Quiz} Quiz</h2>
 				<p>Ready for the Challange?</p>
-				<button type="button" class="btn btn-lg">START NOW</button>
+				<button type="button" class="btn btn-lg" onclick="startQuiz${Quiz}()">START NOW</button>
 			</div>`
 }
 
