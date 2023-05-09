@@ -21,6 +21,10 @@ h2 {
 	text-align: center;
 }
 
+.uppercase {
+	text-transform: uppercase;
+}
+
 .cardWrapper {
 	display: flex;
 	height: 80vh;
@@ -93,4 +97,30 @@ h2 {
 .cardContentWrapper button.opacityNone {
 	opacity: 0;
 	cursor: auto;
+}
+
+.quizcard {
+	width: 90%;
+	height: 90vh;;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+	padding: 10vh 0;
+}
+
+.quizcard ul {
+	gap: 20px;;
+}
+
+.quizcard li {
+	cursor: pointer;
+}
+
+.green {
+	background-color: green;
+}
+
+.red {
+	background-color: red;
 }
