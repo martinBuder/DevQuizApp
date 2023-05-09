@@ -84,10 +84,9 @@ function checkAnswer(i) {
 
 	if (htmlAsk[0][`answer${i}`].includes('true')) {
 		document.getElementById(`answer${i}`).classList.add('green');
-		answers.classList.add('noOnclick');
 		counter++
 	} else {
 		document.getElementById(`answer${i}`).classList.add('red');
-		answers.classList.add('noOnclick')
 	}
+	answers.classList.add('noOnclick')
 }
