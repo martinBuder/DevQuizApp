@@ -12,7 +12,8 @@ let cssAsk = [];
 let jsAsk = [];
 let javaAsk = [];
 
-let content 
+let content;
+let counter = 0;
 
 function render() {
 	content = document.getElementById('content');
@@ -79,11 +80,12 @@ function quizHtml() {
 }
 
 function checkAnswer(i) {
-let answers = document.getElementById('answers');
+	let answers = document.getElementById('answers');
 
 	if (htmlAsk[0][`answer${i}`].includes('true')) {
 		document.getElementById(`answer${i}`).classList.add('green');
-		answers.classList.add('noOnclick')
+		answers.classList.add('noOnclick');
+		counter++
 	} else {
 		document.getElementById(`answer${i}`).classList.add('red');
 		answers.classList.add('noOnclick')
