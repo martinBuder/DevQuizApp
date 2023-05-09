@@ -1,9 +1,9 @@
 let htmlAsk = [
 	{"question": 'Wer hat HTML erfunden?',
-	"answer1": ['Robbie Williams'],
-	"answer2": ['Lady Gaga'],
-	"answer3": ['Tim Berners - Lee', 'true'],
-	"answer4": ['Justin Bieber']
+	"answer0": ['Robbie Williams'],
+	"answer1": ['Lady Gaga'],
+	"answer2": ['Tim Berners - Lee', 'true'],
+	"answer3": ['Justin Bieber']
 	},
 ];// idee if includes true background green else red
 
@@ -65,10 +65,11 @@ function quizHtml() {
     <h5 class="card-title">${htmlAsk[0]['question']}</h5>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item" id="answer0" onclick="checkAnswer(0)">${htmlAsk[0]['answer1'][0]}</li>
-    <li class="list-group-item" id="answer1" onclick="checkAnswer(1)">${htmlAsk[0]['answer2'][0]}</li>
-    <li class="list-group-item" id="answer2" onclick="checkAnswer(2)">${htmlAsk[0]['answer3'][0]}</li>
-				<li class="list-group-item" id="answer3" onclick="checkAnswer(3)">${htmlAsk[0]['answer4'][0]}</li>
+			<div id="answers"></div>
+    <li class="list-group-item" id="answer0" onclick="checkAnswer(0)">${htmlAsk[0]['answer0'][0]}</li>
+    <li class="list-group-item" id="answer1" onclick="checkAnswer(1)">${htmlAsk[0]['answer1'][0]}</li>
+    <li class="list-group-item" id="answer2" onclick="checkAnswer(2)">${htmlAsk[0]['answer2'][0]}</li>
+				<li class="list-group-item" id="answer3" onclick="checkAnswer(3)">${htmlAsk[0]['answer3'][0]}</li>
   </ul>
   <div class="card-body">
     <a href="#" class="card-link"><</a>
@@ -78,12 +79,13 @@ function quizHtml() {
 }
 
 function checkAnswer(i) {
-let answer = document.getElementById(`answer${i}`)
-
+let answers = document.getElementById('answers');
 
 	if (htmlAsk[0][`answer${i}`].includes('true')) {
-		document.getElementById(`answer${i}`).classlist.add('green');
+		document.getElementById(`answer${i}`).classList.add('green');
+		answers.classList.add('noOnclick')
 	} else {
-		document.getElementById(`answer${i}`).classlist.add('red');
+		document.getElementById(`answer${i}`).classList.add('red');
+		answers.classList.add('noOnclick')
 	}
 }
