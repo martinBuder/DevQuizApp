@@ -3,10 +3,11 @@ let cssAsk = [];
 let jsAsk = [];
 let javaAsk = [];
 
+let content 
+
 function render() {
-	let content = document.getElementById('content');
-	content.innerHTML = ``;
-	content.innerHTML += firstContentHtml();
+	content = document.getElementById('content');
+	content.innerHTML = firstContentHtml();
 }
 
 function firstContentHtml() {
@@ -14,12 +15,32 @@ function firstContentHtml() {
 			<h2>Welcome to the 
 					Quiz</h2>
 				<p>Please select your Code-Langlauge.</p>
-				<button type="button" class="btn btn-lg">Large button</button>
+				<button type="button" class="opacityNone">Large button</button>
 			</div>`
 }
 
 function renderHtmlAsk() {
-	let content = document.getElementById('content');
-	content.innerHTML = ``;
-	content.innerHTML += firstContentHtml();
+	content.innerHTML = askHtml('HTML');
 }
+
+function renderCssAsk() {
+	content.innerHTML = askHtml('CSS');
+}
+
+function renderJsAsk() {
+	content.innerHTML = askHtml('JS');
+}
+
+function renderJavaAsk() {
+	content.innerHTML = askHtml('Java');
+}
+
+function askHtml(Quiz) {
+	return /*html */ `
+			<h2>Welcome to<br>
+					The Awesome ${Quiz} Quiz</h2>
+				<p>Ready for the Challange?</p>
+				<button type="button" class="btn btn-lg">START NOW</button>
+			</div>`
+}
+

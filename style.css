@@ -17,6 +17,10 @@ img {
 	height: auto;
 }
 
+h2 {
+	text-align: center;
+}
+
 .cardWrapper {
 	display: flex;
 	height: 80vh;
@@ -84,4 +88,9 @@ img {
 
 .cardContentWrapper button:hover {
 	background-color: rgb(245, 136, 97);
+}
+
+.cardContentWrapper button.opacityNone {
+	opacity: 0;
+	cursor: auto;
 }
