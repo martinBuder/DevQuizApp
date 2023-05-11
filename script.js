@@ -115,17 +115,17 @@ function askStartingHtml(Quiz) {
 			</div>`
 }
 
-function startQuizHtml(Quiz) { //ist kein html code 
+// function startQuizHtml(Quiz) { //ist kein html code 
 
-	let quizAsk = window[Quiz.toLowerCase() + 'Ask']
-	alert(quizAsk)
-	alert((Quiz.toLowerCase() + 'Ask').length)
-	let quizArray = window[Quiz.toLowerCase() + 'Ask'];
-	alert(quizArray)
-	for (let i = 0; i < quizArray.length; i++) {
-			content.innerHTML = quizHtml(quizArray, i);
-	}
-}
+// 	let quizArray = Quiz.toLowerCase() + 'Ask'
+// 	alert(quizArray)
+// 	alert((Quiz.toLowerCase() + 'Ask').length)
+// 	quizArray = window[quizArray];
+// 	alert(quizArray)
+// 	for (let i = 0; i < quizArray.length; i++) {
+// 			content.innerHTML = quizHtml(quizArray, i);
+// 	}
+// }
 
 function quizHtml(quizArray, i) {
 alert(quizArray)
@@ -171,15 +171,15 @@ function checkAnswer(i) {
 }
 }
 
-// var testAsk = [1, 2, 2, 5, 1]
+var testAsk = [{"Zahl": 1}, {"Zahl": 2}, {"Zahl": 2}, {"Zahl": 5}, {"Zahl": 1}]
 
-// function startTest() {
-// 	startQuizHtml('Test')
-// }
+function startTest() {
+	startQuizHtml('Test')
+}
 
-// function startQuizHtml(Maus) { 
-// 	let quizName = window[Maus.toLowerCase() + 'Ask'];
-// 	alert(quizName.length)
-// 	alert(quizName);
-// }
+function startQuizHtml(Maus) { 
+	let quizName = window[Maus.toLowerCase() + 'Ask'];
+	alert(quizName.length)
+	alert(quizName[0]["Zahl"]);
+}
 
